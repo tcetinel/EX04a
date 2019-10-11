@@ -1,4 +1,3 @@
-
 SELECT ProjectID, ProjectName, Department, MaxHours, StartDate, EndDate FROM project;
 SELECT * FROM project;
 SELECT ProjectName, Department, MaxHours FROM project;
@@ -31,8 +30,6 @@ SELECT COUNT(*) AS NumberOfProjects FROM project;
 SELECT COUNT(Department) AS NumberOfDepartments FROM project;
 SELECT COUNT(DISTINCT Department) AS NumberOfDepartments FROM project;
 SELECT SUM(MaxHours) AS TotalMaxHours, AVG(MaxHours) AS AverageMaxHours, MIN(MaxHours) AS MinimumMaxHours, MAX(MaxHours) AS MaximumMaxHours FROM project WHERE ProjectID <= 1200;
-SELECT ProjectName, COUNT(*) FROM project;
-SELECT * FROM project WHERE MaxHours > AVG(MaxHours);
 SELECT ProjectID, ProjectName, MaxHours, (24.50 * MaxHours) AS MaxProjectCost FROM project;
 SELECT Department, COUNT(*) AS NumberOfEmployees FROM employee GROUP BY Department;
 SELECT Department, COUNT(*) AS NumberOfEmployees FROM employee GROUP BY Department HAVING COUNT(*) > 1;
